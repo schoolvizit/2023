@@ -1,0 +1,121 @@
+.fullscreen {
+  position: relative;
+  background-color: var(--color-light);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.fullscreen__title {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  margin-top: 137px;
+
+  @include small-tablet {
+    margin-top: 60px;
+  }
+
+  h1 {
+    text-align: left;
+    max-width: 500px;
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    z-index: 6;
+    text-shadow: 2px 2px 0 var(--color-light), 2px -2px 0 var(--color-light), -2px 2px 0 var(--color-light), -2px -2px 0 var(--color-light), 2px 0px 0 var(--color-light), 0px 2px 0 var(--color-light), -2px 0px 0 var(--color-light), 0px -2px 0 var(--color-light);
+
+    @include small-tablet {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+      text-align: center;
+      max-width: 350px;
+      margin: 0 auto;
+      margin-top: 77px;
+    }
+  }
+}
+
+.info {
+  width: 100%;
+  background-color: var(--color-gray);
+  margin-bottom: 130px;
+  z-index: 1;
+
+  @include small-desktop {
+    margin-bottom: 0;
+
+  }
+
+  &__body {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-lightgray);
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    max-width: 100px;
+
+    @include mobile {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+
+    @include mobile {
+      margin-right: 10px;
+    }
+
+  }
+
+  &__link {
+    svg {
+      fill: var(--color-lightgray);
+      width: 24px;
+      height: 24px;
+
+      @include mobile {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

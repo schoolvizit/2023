@@ -1,0 +1,22 @@
+.journal.cart {
+  background-color: var(--color-lightgray);
+}
+
+.select {
+
+  &__body {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-orange);
+    margin-bottom: 10px;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+  }
+}

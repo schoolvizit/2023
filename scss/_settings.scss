@@ -1,0 +1,356 @@
+// Скрытие скролла на сайте
+// html {
+//   scrollbar-width: none; /* Firefox */
+//   -ms-overflow-style: none;  /* IE 10+ */
+//   &::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent; /* Chrome/Safari/Webkit */
+//   }
+// }
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: italic;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  -webkit-text-size-adjust: 100%;
+  // margin: 0;
+  // min-width: 320px;
+  // min-height: 100%;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: calc((100% - 1240px) / 2);
+  bottom: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background-color: var(--color-orange);
+  transform: rotate(90deg);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  @include big-desktop {
+    right: 15px;
+  }
+
+  svg {
+    fill: var(--color-white);
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.cart {
+  background-color: var(--color-light);
+  padding: 50px 0;
+
+  &__title {
+    font-family: "PoiretOne";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      border-top: 1px solid var(--color-gray);
+      width: 100%;
+      margin-left: 60px;
+    }
+
+    @include tablet {
+
+      &::before {
+        content: "";
+        border-top: 1px solid var(--color-gray);
+        width: 100%;
+        margin-right: 60px;
+      }
+    }
+
+    @include small-tablet {
+      display: block;
+      text-align: center;
+      font-size: 40px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__info {
+    @include flex-col-sb;
+    width: 50%;
+    padding-right: 20px;
+
+    @include tablet {
+      padding-right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+    color: var(--color-orange);
+    margin-bottom: 25px;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+  }
+
+  &__body {
+    @include flex-col-sb;
+    height: 100%;
+  }
+
+  &__list li {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list--bottom li {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list li:not(:last-child),
+  &__list--bottom li:not(:last-child) {
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list li::before,
+  &__list--bottom li::before {
+    content: "";
+    display: inline-block;
+    top: 0;
+    left: 0;
+    background-image: url(../img/tick.svg);
+    @include bg-cover;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+
+    @include small-tablet {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__list--top li::before {
+    display: none;
+  }
+
+
+
+  &__list span {
+    text-transform: lowercase;
+  }
+
+  &__list,
+  &__list--bottom {
+
+    @include tablet {
+      text-align: left;
+      margin: 0 auto;
+    }
+
+    .item span {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 1.2;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__list--top {
+    margin-bottom: 10px;
+  }
+
+  span.small {
+    text-transform: lowercase;
+  }
+
+  &__image {
+    @include tablet {
+      margin-bottom: 20px;
+      max-width: 300px;
+    }
+  }
+}
+
+.gallery {
+
+  &__title {
+    text-align: center;
+    margin: 30px 0;
+
+    h3 {
+      // position: relative;
+      display: inline-block;
+      font-family: "PoiretOne";
+font-style: normal;
+      font-size: 30px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: var(--color-gray);
+      white-space: nowrap;
+      border-bottom: 2px solid var(--color-gray);
+
+//       &::before {
+//         content: "";
+//         position: absolute;
+//         width: 20px;
+//         height: 20px;
+//    left:-30px;
+// top: 50%;
+// transform: translateY(-50%);
+// border-radius: 100px;
+//         background-color: var(--color-orange-opacity);
+//       }
+    }
+
+
+
+
+    // &::before {
+    //   content: "";
+    //   border-top: 1px solid var(--color-gray);
+    //   width: 100%;
+    //   margin-right: 60px;
+    // }
+
+    // &::after {
+    //   content: "";
+    //   border-top: 1px solid var(--color-gray);
+    //   width: 100%;
+    //   margin-left: 60px;
+    // }
+
+    @include small-tablet {
+      display: block;
+      text-align: center;
+      font-size: 25px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+}
+
+.carts {
+  &__inner {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  img {
+    max-width: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  &__lable {
+    display: block;
+    color: var(--color-gray);
+    text-align: center;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+  }
+}
