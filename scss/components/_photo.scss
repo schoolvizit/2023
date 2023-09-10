@@ -1,0 +1,118 @@
+.photo {
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__inner{
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  &__image {
+    position: relative;
+    max-width: 300px;
+
+    button {
+      display: inline-block;
+      position: absolute;
+      width: 70%;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-orange);
+        border: 2px solid var(--color-white);
+        transition: all .5s;
+      }
+    }
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.descr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+
+  @include small-tablet {
+    order: -1;
+  }
+
+  &__top {
+    margin-bottom: 50px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bottom {
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__bottom li::before {
+    content: "";
+    display: inline-block;
+    top: 0;
+    left: 0;
+    background-image: url(../img/tick.svg);
+    @include bg-cover;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+
+    @include small-tablet {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  span.small {
+    text-transform: lowercase;
+  }
+}

@@ -1,0 +1,19 @@
+// базовые подключения
+@import "nullstyle";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/home";
+@import "./components/ds";
+@import "./components/photo";
+@import "./components/footer";
+
+// подключения мелких компонентов страницы
+@import "./components/castom-select";
+@import "./components/castom-fslightbox";
+
+

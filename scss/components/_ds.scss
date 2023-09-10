@@ -1,0 +1,15 @@
+.select {
+
+  &__body {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-orange);
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}

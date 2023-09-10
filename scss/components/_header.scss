@@ -1,0 +1,70 @@
+.header {
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(99, 125, 136, .3);
+  font-family: "PoiretOne";
+  font-style: normal;
+  line-height: 28px;
+
+  @include tablet {
+    height: 60px;
+  }
+
+  @include small-tablet {
+    position: fixed;
+    width: 60px;
+    top: 60px;
+    right: 15px;
+    border-radius: 50px;
+    background-color: var(--color-gray);
+    z-index: 10;
+  }
+}
+
+.header__body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  @include tablet {
+    justify-content: center;
+    height: 60px;
+  }
+
+  @include small-tablet {
+    justify-content: flex-end;
+  }
+}
+
+.header__list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header__item a {
+  transition: color 0.3s ease-in-out;
+  z-index: 3;
+
+  &:hover {
+    color: var(--color-white);
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.burger__overlay {
+  display: none;
+}
+
+@include burger;

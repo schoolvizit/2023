@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="photo-camera.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>School</title>
+   <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="page" class="page__body">
+
+   <div class="wrapper">
+      <a href="#page" class="to-top">
+         <svg class="to-top__icon">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+         </svg>
+      </a>
+
+      <header class="header">
+         <div class="container">
+            <div class="header__body">
+               <nav class="header__menu">
+                  <ul class="header__list">
+                     <li class="header__item">
+                        <a href="index.html" class="header__link">Главная</a>
+                     </li>
+                     <li class="header__item">
+                        <a href="small-school.html" class="header__link">1-4 классы</a>
+                     </li>
+                     <li class="header__item">
+                        <a href="old-school.html" class="header__link">9-11 классы</a>
+                     </li>
+                     <li class="header__item">
+                        <a href="photo.html" class="header__link">Фото</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="burger">
+                  <span></span>
+               </div>
+               <div class="burger__overlay"></div>
+            </div>
+         </div>
+      </header>
+
+      <main class="main">
+         <div class="container">
+            <section class="gallery">
+               <div class="journal__gallery gallery">
+                  <div class="gallery__body carts">
+                     <div class="carts__inner">
+                        <a data-fslightbox="journal-ds_1" href="img/journal/big/j_123.jpg">
+                           <img class="carts__picture" src="img/journal/small/j_020.jpg" alt="#">
+                        </a>
+                        <a data-fslightbox="journal-ds_1" href="img/journal/big/j_124.jpg"></a>
+                        <a data-fslightbox="journal-ds_1" href="img/journal/big/j_125.jpg"></a>
+                        <a data-fslightbox="journal-ds_1" href="img/journal/big/j_126.jpg"></a>
+                        <a data-fslightbox="journal-ds_1" href="img/journal/big/j_127.jpg"></a>
+                        <span class="carts__lable">"Зайчики"</span>
+                     </div>
+                     <div class="carts__inner">
+                        <a data-fslightbox="journal-ds_2" href="img/journal/big/j_001.jpg"><img class="carts__picture"
+                              src="img/journal/small/j_001.jpg" alt="#"></a>
+                        <a data-fslightbox="journal-ds_2" href="img/journal/big/j_002.jpg"></a>
+                        <a data-fslightbox="journal-ds_2" href="img/journal/big/j_003.jpg"></a>
+                        <a data-fslightbox="journal-ds_2" href="img/journal/big/j_004.jpg"></a>
+                        <a data-fslightbox="journal-ds_2" href="img/journal/big/j_005.jpg"></a>
+                        <span class="carts__lable">"Винни-Пух"</span>
+                     </div>
+                     <div class="carts__inner">
+                        <a data-fslightbox="journal-ds_3" href="img/journal/big/j_006.jpg"><img class="carts__picture"
+                              src="img/journal/small/j_002.jpg" alt="#"></a>
+                        <a data-fslightbox="journal-ds_3" href="img/journal/big/j_007.jpg"></a>
+                        <a data-fslightbox="journal-ds_3" href="img/journal/big/j_008.jpg"></a>
+                        <a data-fslightbox="journal-ds_3" href="img/journal/big/j_009.jpg"></a>
+                        <a data-fslightbox="journal-ds_3" href="img/journal/big/j_010.jpg"></a>
+                        <span class="carts__lable">"Весёлая азбука"</span>
+                     </div>
+                     <div class="carts__inner">
+                        <a data-fslightbox="journal-ds_4" href="img/journal/big/j_118.jpg"><img class="carts__picture"
+                              src="img/journal/small/j_019.jpg" alt="#"></a>
+                        <a data-fslightbox="journal-ds_4" href="img/journal/big/j_119.jpg"></a>
+                        <a data-fslightbox="journal-ds_4" href="img/journal/big/j_120.jpg"></a>
+                        <a data-fslightbox="journal-ds_4" href="img/journal/big/j_121.jpg"></a>
+                        <a data-fslightbox="journal-ds_4" href="img/journal/big/j_122.jpg"></a>
+                        <span class="carts__lable">"Пчёлки"</span>
+                     </div>
+                  </div>
+               </div>
+
+            </section>
+
+            <section class="info">
+
+               <div class="info__cart cart">
+                  <div class="cart__body">
+                     <div class="cart__info">
+                        <h3 class="cart__title">журнал</h3>
+                        <p class="cart__text">Минимальное количество 8 страниц (включая обложку)
+                        </p>
+                        <ul class="cart__list cart__list--top">
+                           <li class="item">
+                              <span>мягкая</span> обложка <span class="price-one">55</span><span class="small">р</span>
+                           </li>
+                           <li class="item">
+                              <span>твёрдая</span> обложка <span class="price-two">65</span><span class="small">р</span>
+                           </li>
+                        </ul>
+                        <div class="cart__select select">
+                           <div class="select__body">
+                              <span class="select__title">рассчитать стоимость</span>
+
+                              <div class="select__dropdown">
+                                 <button class="select__btn">8 страниц</button>
+                                 <ul class="select__list">
+                                    <li class="select__list-item" data-value="55">8 страниц</li>
+                                    <li class="select__list-item" data-value="60">12 страниц</li>
+                                    <!-- <li class="select__list-item" data-value="65">16 страниц</li>
+                                       <li class="select__list-item" data-value="70">20 страниц</li>
+                                       <li class="select__list-item" data-value="75">24 страницы</li> -->
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <ul class="cart__list">
+                           <li class="item">Формат А-4 (в закрытом виде)</li>
+                           <li class="item">От двух персональных портретов</li>
+                           <li class="item">Групповая съёмка в помещении и на улице</li>
+                           <li class="item">Дизайн на выбор<span class="small"> (один на весь класс)</span></li>
+                           <li class="item">Минимальный заказ<span class="small"> от 15 человек</span></li>
+                        </ul>
+                     </div>
+                     <div class="cart__video">
+                        <button class="btn btn-journal">смотреть журнал</button>
+                        <a data-fslightbox="video-journal" href="video/01.mp4">
+                           <video src="video/01.mp4"></video>
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="cart__body">
+                     <div class="cart__info">
+                        <h3 class="cart__title">трюмо</h3>
+                        <p class="cart__text">Количество 6 страниц (включая обложку)
+                        </p>
+                        <ul class="cart__list cart__list--top">
+                           <li class="item">
+                              <span>мягкое</span> трюмо <span class="price-one">50</span><span class="small">р</span>
+                           </li>
+                           <li class="item">
+                              <span>твёрдое</span> трюмо <span class="price-two">60</span><span class="small">р</span>
+                           </li>
+                        </ul>
+                        <ul class="cart__list">
+                           <li class="item">Формат А-4 (в закрытом виде)</li>
+                           <li class="item">дин персональный портрет</li>
+                           <li class="item">Групповая съёмка в помещении и на улице</li>
+                           <li class="item">Дизайн на выбор<span class="small"> (один на весь класс)</span></li>
+                           <li class="item">Минимальный заказ<span class="small"> от 15 человек</span></li>
+                        </ul>
+                     </div>
+
+                     <div class="cart__video">
+                        <button class="btn btn-trumo">смотреть трюмо</button>
+                        <a data-fslightbox="video-trumo" href="video/02.mp4">
+                           <video src="video/02.mp4"></video>
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="cart__body">
+                     <div class="cart__info">
+                        <h3 class="cart__title">папка</h3>
+                        <p class="cart__text">Количество 4 страницы (включая обложку)
+                        </p>
+                        <ul class="cart__list cart__list--top">
+                           <li class="item">
+                              <span>мягкая</span> папка <span class="price-one">40</span><span class="small">р</span>
+                           </li>
+                           <li class="item">
+                              <span>твёрдая</span> папка <span class="price-two">50</span><span class="small">р</span>
+                           </li>
+                        </ul>
+                        <ul class="cart__list">
+                           <li class="item">Формат А-4 (в закрытом виде)</li>
+                           <li class="item">Один персональный портрет</li>
+                           <li class="item">Групповая съёмка в помещении</li>
+                           <li class="item">Дизайн на выбор<span class="small"> (один на весь класс)</span></li>
+                           <li class="item">Минимальный заказ<span class="small"> от 15 человек</span></li>
+                        </ul>
+                     </div>
+                     <div class="cart__video">
+                        <button class="btn btn-papka">смотреть папку</button>
+                        <a data-fslightbox="video-papka" href="video/03.mp4">
+                           <video src="video/03.mp4"></video>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__body">
+               <p class="footer__text">Елена Галинская</p>
+               <ul class="footer__items">
+                  <li class="footer__item">
+                     <a href="mailto:alyenka_B@tut.by" target="blank" class="footer__link">
+                        <svg>
+                           <use xlink:href="img/sprite.svg#mail"></use>
+                        </svg>
+                     </a>
+                  </li>
+
+                  <li class="footer__item">
+                     <a href="https://t.me/elenagalinskaya" target="blank" class="footer__link">
+                        <svg>
+                           <use xlink:href="img/sprite.svg#telegram"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="footer__item">
+                     <a href="tel:375293397812" class="footer__link">
+                        <svg>
+                           <use xlink:href="img/sprite.svg#phone"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="footer__item">
+                     <a href="tel:375293397812" class="footer__link">
+                        <p>+375 (29) 339-78-12</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+
+   <script src="js/fslightbox.min.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
